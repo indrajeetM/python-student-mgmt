@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="container">
+    <div class="row">
+        <form method="POST">
+            {{form.hidden_tag()}}
+            <div class="form-group">
+                {{form.classid.label(class='form-label')}} {{form.classid(class='form-control')}}
+            </div>
+            <div class="form-group">
+                {{form.divisionid.label(class='form-label')}} {{form.divisionid(class='form-control')}}
+            </div>
+            <div class="form-group">
+                {{form.subject.label(class='form-label')}} {{form.subject(class='form-control')}}
+            </div>
+            <div class="form-group">
+                {{form.question.label(class='form-label')}} {{form.question(class='form-control')}}
+            </div>
+            <div class="form-group">
+                {{form.lastdate.label(class='form-label')}} {{form.lastdate(class='form-control')}}
+            </div>
+            <div class="form-group">
+                {{form.submit()}}
+            </div>
+        </form>
+    </div>
+</div>
+{%endblock%}

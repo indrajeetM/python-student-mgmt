@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="container">
+    <div class="row">
+        {%for homework in homeWorkList%}
+            <div class="card">
+                <div class="card-title">{{homework.subject}}</div>
+                <div class="card-body">
+                    <p>Last Date : {{homework.last_date.strftime('%B %d %Y')}}</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-info" href="{{url_for('student.homework',homework_id=homework.id)}}">View</a>
+                </div>
+            </div>
+        {%endfor%}
+    </div>
+</div>
+{%endblock%}
